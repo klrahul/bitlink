@@ -13,6 +13,7 @@ const shortner = () => {
 
         const requestOptions = {
             method: "POST",
+            credentials: "include",
             headers: myHeaders,
             body: raw,
             redirect: "follow"
