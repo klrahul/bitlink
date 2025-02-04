@@ -5,6 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  transition: all;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,7 +14,14 @@
     --foreground: #ededed;
   }
 }
+.cursor::after {
+  content: '|';
+  animation: blink 1s infinite;
+}
 
+@keyframes blink {
+  50% { opacity: 0; }
+}
 body {
   color: var(--foreground);
   background: var(--background);
